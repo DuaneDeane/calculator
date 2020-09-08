@@ -1,33 +1,47 @@
-var num1=prompt("Enter first number: ");
-var num2=prompt("Enter second number: ");
-
-var x=Number(num1);
-var y=Number(num2);
+console.log('Aloha')
+const elCalc = document.getElementById("calculator");
+console.log(elCalc);
 
 function sum(x, y){
-    var sum = x + y;
-    console.log(sum);
-    document.getElementById("calculator").innerHTML=`the result is ${sum}`;
+    console.log('top Sum')
+    const mySum = x + y;
+    console.log('mySum: ', mySum);
+    elCalc.innerHTML =`the result is ${mySum}`;
 }
-sum(x,y);
 
 function subtract(x, y){
-    var subtract = x - y;
-    console.log(subtract);
-    document.getElementById("calculator").innerHTML=`the result is ${subtract}`;
+    console.log('top Subtract')
+    const subtract = x - y;
+    console.log('subtract: ', subtract);
+    elCalc.innerHTML=`the result is ${subtract}`;
 }
-subtract(x,y);
 
 function multiply(x, y){
-    var multiply = x - y;
-    console.log(multiply);
-    document.getElementById("calculator").innerHTML=`the result is ${multiply}`;
+    console.log('top Multiply')
+    const multiply = x * y;
+    console.log('multiply: ', multiply);
+    elCalc.innerHTML=`the result is ${multiply}`;
 }
-multiply(x,y);
 
 function divide(x, y){
-    var divide = x - y;
-    console.log(divide);
-    document.getElementById("calculator").innerHTML=`the result is ${divide}`;
+    console.log('top Divide')
+    const divide = x / y;
+    console.log('divide: ', divide);
+    elCalc.innerHTML=`the result is ${divide}`;
 }
-divide(x,y);
+
+
+function main(x,y){
+    sum(x,y);
+    subtract(x,y);
+    multiply(x,y);
+    divide(x,y);
+}
+console.log('prompts')
+const num1=prompt("Enter first number: ");
+const num2=prompt("Enter second number: ");
+
+const x=Number(num1);
+const y=Number(num2);
+console.log('Before main')
+main(x,y);
